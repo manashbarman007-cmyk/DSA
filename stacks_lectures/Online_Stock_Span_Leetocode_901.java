@@ -57,7 +57,7 @@ class StockSpanner {
 
 // class StockSpanner {
 
-//     private Stack<int[]> stack;
+//     private Stack<int[]> stack; // stack stores (price, span)
 //     public StockSpanner() {
 //         stack = new Stack<>();
 
