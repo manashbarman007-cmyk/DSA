@@ -80,7 +80,7 @@ public class Merge_Sort {
 //     public void mergeSort (int[] nums) {
 //         int n = nums.length;
 //         // base case
-//         if (n <= 1) return;
+//         if (n == 1) return;
 
 
 //         int mid = n / 2;
