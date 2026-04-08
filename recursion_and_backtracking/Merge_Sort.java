@@ -69,3 +69,72 @@ public class Merge_Sort {
         }
     }
 }
+
+// study this
+// class Solution {
+//     public int[] sortArray(int[] nums) {
+//         mergeSort(nums);
+//         return nums;
+//     }
+
+//     public void mergeSort (int[] nums) {
+//         int n = nums.length;
+//         // base case
+//         if (n <= 1) return;
+
+
+//         int mid = n / 2;
+//         int[] left = new int[mid];
+//         for (int i = 0; i < mid; i++) {
+//             left[i] = nums[i];
+//         }
+
+//         int[] right = new int[n - mid];
+//         for (int i = mid; i < n; i++) {
+//             right[i - mid] = nums[i];
+//         }
+
+
+//         mergeSort(left);
+//         mergeSort(right);
+
+//         // merge the left and right arrays
+//         merge(nums, left, right);
+//     }
+
+//     public void merge (int[] nums, int[] left, int[] right) {
+//         int l = 0;
+//         int r = 0;
+//         int k = 0;
+
+//         int lSize = left.length;
+//         int rSize = right.length;
+
+//         while (l < lSize && r < rSize) {
+//             if (left[l] <= right[r]) {
+//                 nums[k] = left[l];
+//                 l++;
+//             }
+//             else {
+//                 nums[k] = right[r];
+//                 r++;
+//             }
+//             k++;
+//         }
+
+//         // remaining left element
+//         while (l < lSize) {
+//             nums[k] = left[l];
+//             l++;
+//             k++;
+//         }
+
+//         // remaining right element
+//         while (r < rSize) {
+//             nums[k] = right[r];
+//             r++;
+//             k++;
+//         }
+
+//     }
+// }
