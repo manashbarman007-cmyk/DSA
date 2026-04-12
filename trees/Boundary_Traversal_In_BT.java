@@ -114,3 +114,65 @@ public class Boundary_Traversal_In_BT {
     }
 
 }
+
+// study this
+
+// class Solution {
+//    ArrayList<Integer> boundaryTraversal(Node root) {
+//         // code here
+//         ArrayList<Integer> leftBoundary = new ArrayList<>();
+//         ArrayList<Integer> leafBoundary = new ArrayList<>();
+//         ArrayList<Integer> rightBoundary = new ArrayList<>();
+
+//         traverseLeftBoundary(root.left, leftBoundary);
+//         traverseRightBoundary(root.right, rightBoundary);
+//         traverseLeafBoundary(root, leafBoundary);
+
+
+
+//         List<Integer> reversedRightBoundary = rightBoundary.reversed();
+
+//         ArrayList<Integer> finalList = new ArrayList<>();
+
+//         if (root == null) return finalList;
+
+//         if (root.left == null && root.right == null) {
+//             finalList.add(root.data);
+//             return finalList;
+//         }
+
+//         finalList.add(root.data);
+
+
+//         finalList.addAll(leftBoundary);
+//         finalList.addAll(leafBoundary);
+//         finalList.addAll(reversedRightBoundary);
+
+//         return finalList;
+//     }
+
+//     public void traverseLeftBoundary(Node root, ArrayList<Integer> leftBoundary) {
+//         while (root != null) {
+//             // not a leaf node
+//             if (root.left != null || root.right != null) leftBoundary.add(root.data);
+
+//             if (root.left != null) root = root.left;
+//             else root = root.right;
+//         }
+//     }
+//     public void traverseRightBoundary(Node root, ArrayList<Integer> rightBoundary) {
+//         while (root != null) {
+//             // not a leaf node
+//             if (root.left != null || root.right != null) rightBoundary.add(root.data);
+
+//             if (root.right != null) root = root.right;
+//             else root = root.left;
+//         }
+//     }
+//     public void traverseLeafBoundary(Node root, ArrayList<Integer> leafBoundary) {
+//         if (root == null) return;
+//         if (root.left == null && root.right == null) leafBoundary.add(root.data);
+//         traverseLeafBoundary(root.left, leafBoundary);
+//         traverseLeafBoundary(root.right, leafBoundary);
+//     }
+// }
