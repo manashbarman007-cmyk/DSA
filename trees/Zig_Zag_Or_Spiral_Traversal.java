@@ -52,3 +52,46 @@ public class Zig_Zag_Or_Spiral_Traversal {
         return list;
     }
 }
+
+// Use Deque
+
+// class Solution {
+//      public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+
+//         List<List<Integer>> list = new ArrayList<>();
+
+//         if (root == null) return list;
+
+//         Deque<TreeNode> deque = new ArrayDeque<>();
+
+//         deque.offerLast(root);
+
+//         boolean traverseLeft = true;
+
+//         while (!deque.isEmpty()) {
+//             int size = deque.size();
+//             List<Integer> sublist = new ArrayList<>();
+//             if (traverseLeft) {
+//                 traverseLeft = false;
+//                 for (int i = 0; i < size; i++) {
+//                     TreeNode curNode = deque.pollFirst();
+//                     if (curNode.left != null) deque.offerLast(curNode.left);
+//                     if (curNode.right != null) deque.offerLast(curNode.right);
+//                     sublist.add(curNode.val);
+//                 }
+
+//             }else {
+//                 traverseLeft = true;
+//                 for (int i = 0; i < size; i++) {
+//                     TreeNode curNode = deque.pollLast();
+//                     if (curNode.right != null) deque.offerFirst(curNode.right);
+//                     if (curNode.left != null) deque.offerFirst(curNode.left);
+//                     sublist.add(curNode.val);
+//                 }
+//             }
+//             list.add(sublist);
+//         }
+
+//         return list;
+//     }
+// }
