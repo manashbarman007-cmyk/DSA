@@ -71,3 +71,26 @@ public class Reverse_A_DLL {
         return head;
     }
 }
+
+// Study this (more intuitive) 
+
+// class Solution {
+//      public Node reverse(Node head) {
+//         // code here
+//         Node curNode = head;
+//         Node prevNode = null;
+//         while (curNode != null) {
+//             Node nextNode = curNode.next;
+            
+//             // swap logic
+//             curNode.next = prevNode;
+//             curNode.prev = nextNode;
+            
+            
+//             prevNode = curNode;
+//             curNode = nextNode;
+//         }
+        
+//         return prevNode;
+//     }
+// }
