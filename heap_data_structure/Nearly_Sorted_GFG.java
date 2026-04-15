@@ -139,25 +139,26 @@ public class Nearly_Sorted_GFG {
 
 // study this
 
-// public void nearlySorted(int[] arr, int k) {
-//         int n = arr.length;
-//         PriorityQueue<Integer> pq = new PriorityQueue<>();
+ // public void nearlySorted(int[] arr, int k) {
+ //        // code here
+ //        int n = arr.length;
+ //        PriorityQueue<Integer> pq = new PriorityQueue<>();
 
-//         int index = 0;
+ //        // we run this for loop for the first (k + 1) elements as the smallest
+ //        // element will always be in this range
+ //        for (int i = 0; i <= k && i < n; i++) {
+ //            pq.offer(arr[i]);
+ //        }
 
-//         // Step 1: first k+1 elements
-//         for (int i = 0; i <= k && i < n; i++) {
-//             pq.offer(arr[i]);
-//         }
+ //        int ind = 0;
 
-//         // Step 2: process remaining elements
-//         for (int i = k + 1; i < n; i++) {
-//             arr[index++] = pq.poll();
-//             pq.offer(arr[i]);
-//         }
+ //        // process the remaining elements
+ //        for (int i = k + 1; i < n; i++) {
+ //            arr[ind++] = pq.poll();
+ //            pq.offer(arr[i]);
+ //        }
 
-//         // Step 3: empty the heap
-//         while (!pq.isEmpty()) {
-//             arr[index++] = pq.poll();
-//         }
-//     }
+ //        while (!pq.isEmpty()) {
+ //            arr[ind++] = pq.poll();
+ //        }
+ //    }
