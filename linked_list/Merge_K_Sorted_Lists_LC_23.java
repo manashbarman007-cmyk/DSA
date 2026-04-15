@@ -60,19 +60,29 @@ public class Merge_K_Sorted_Lists_LC_23 {
     }
 
 
-    // Approach 2 : Min Heap (do later after studying maps and heap)
-    // main func
-//    public Node mergeKLists(Node[] lists) {
-//        PriorityQueue <Node> pq = new PriorityQueue<>();
-//        int n = lists.length;;
-//        for (int i = 0; i < n; i++) {
-//            pq.add(lists[i]);
-//        }
-//        Node dummyNode = new Node(-1);
-//        Node temp = dummyNode;
-//        while (! pq.isEmpty()) {
-//            temp.next = pq.poll();
-//            temp = temp.next;
-//        }
-//    }
+    
 }
+
+// Using PriorityQueue
+
+// class Solution {
+//     public Node mergeKLists(Node[] lists) {
+
+//         PriorityQueue<Integer> pq = new PriorityQueue<>();
+//         for (Node head : lists) {
+//             Node temp = head;
+//             while (temp != null) {
+//                 pq.offer(temp.data);
+//                 temp = temp.next;
+//             }
+//         }
+        
+//         Node dummy = new Node(-1);
+//         Node cur = dummy;
+//         while (!pq.isEmpty()) {
+//             cur.next = new Node(pq.poll());
+//             cur = cur.next;
+//         }
+//         return dummy.next;
+//     }
+// }
