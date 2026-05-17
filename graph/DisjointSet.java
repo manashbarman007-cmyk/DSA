@@ -71,4 +71,9 @@ public class DisjointSet {
             size[rootOfX] += size[rootOfY];
         }
     }
+
+    // check if nodes x and y are from the same component
+    public boolean isConnected (int x, int y) {
+        return find(x) == find (y);
+    }
 }
