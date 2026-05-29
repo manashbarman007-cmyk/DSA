@@ -73,3 +73,112 @@ public class Delete_Node_In_BST {
         }
     }
 }
+
+
+// study this:
+
+// class Solution {
+//     public TreeNode deleteNode(TreeNode root, int key) {
+//         if (root == null) return null;
+//         TreeNode[] nodeAndParent = findNodeAndParent(root, key);
+//         if (nodeAndParent == null) return root; // i.e. the node does not exist
+//         else {
+//             TreeNode nodeToRemove = nodeAndParent[0];
+//             TreeNode parent = nodeAndParent[1];
+
+//             // case 1 : node is a leaf node
+//             if (nodeToRemove.left == null && nodeToRemove.right == null) {
+
+//                 // root deletion
+//                 if (parent == null) {
+//                     return null;
+//                 }
+//                 else {
+//                     if (nodeToRemove.val < parent.val) parent.left = null;
+//                     else parent.right = null;
+//                 }
+//             }
+//             // case 2 : node has 1 child
+//             else if (nodeToRemove.left == null || nodeToRemove.right == null) {
+//                 TreeNode child;
+
+//                 if (nodeToRemove.left == null) {
+//                     child = nodeToRemove.right;
+
+//                     //root deletion
+//                     if (parent == null) {
+//                         return child;
+//                     }
+//                     else {
+//                         if (nodeToRemove.val < parent.val) parent.left = child;
+//                         else parent.right = child;
+//                     }
+//                 } else {
+//                     child = nodeToRemove.left;
+
+//                     //root deletion
+//                     if (parent == null) {
+//                         return child;
+//                     }
+//                     else {
+//                         if (nodeToRemove.val < parent.val) parent.left = child;
+//                         else parent.right = child;
+//                     }
+//                 }
+//             }
+//             // case 3 : if node has 2 children
+//             else {
+//                 TreeNode[] inorderSuccessorAndParent = findInorderSuccessorAndParent(nodeToRemove);
+//                 TreeNode inorderSuccessor = inorderSuccessorAndParent[0];
+//                 TreeNode inorderSuccessorParent = inorderSuccessorAndParent[1];
+
+//                 if (inorderSuccessorParent != nodeToRemove) {
+//                     nodeToRemove.val = inorderSuccessor.val;
+//                     inorderSuccessorParent.left = inorderSuccessor.right;
+//                 }else {
+//                     nodeToRemove.val = inorderSuccessor.val;
+//                     nodeToRemove.right = inorderSuccessor.right;
+//                 }
+//             }
+//         }
+//         return root;
+//     }
+
+//     public TreeNode[] findNodeAndParent (TreeNode root, int key) {
+//         TreeNode[] nodeAndParent = new TreeNode[2];
+//         TreeNode parent = null;
+//         while (root != null) {
+//             if (key == root.val) {
+//                 nodeAndParent[0] = root;
+//                 nodeAndParent[1] = parent;
+//                 return nodeAndParent;
+//             } else if (key < root.val) {
+//                 parent = root;
+//                 root = root.left;
+//             }else {
+//                 parent = root;
+//                 root = root.right;
+//             }
+//         }
+//         return null;
+//     }
+//     public TreeNode[] findInorderSuccessorAndParent (TreeNode node) {
+//         TreeNode[] inorderSuccessorAndParent = new TreeNode[2];
+//         TreeNode parent = node;
+
+//         // move right
+//         TreeNode cur = node.right;
+        
+//         while (cur != null) {
+//             if (cur.left != null) {
+//                 parent = cur;
+//                 cur = cur.left;
+//             }else {
+//                 inorderSuccessorAndParent[0] = cur;
+//                 inorderSuccessorAndParent[1] = parent;
+//                 return inorderSuccessorAndParent;
+//             }
+//         }
+//         return null;
+//     }
+// }
