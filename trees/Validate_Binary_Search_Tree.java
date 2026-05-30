@@ -29,6 +29,24 @@ public class Validate_Binary_Search_Tree {
 //        inorder(root.right, list);
 //    }
 
+
+    // Approach 1 optimized (no need to maintain a list, we just use a prev to keep track of the previous
+    // node in the inorder traversal)
+// class Solution {
+//  TreeNode prev = null;
+
+// public boolean isValidBST(TreeNode root) {
+//         if (root == null) return true;
+//         if (!isValidBST(root.left)) return false;
+        
+//         if (prev != null && root.val <= prev.val) return false;
+        
+//         prev = root;
+        
+//         return isValidBST(root.right);
+//     }
+// }
+
     // Approach 2
     public boolean isValidBST(NodeBT root) {
         return func(root, Long.MIN_VALUE, Long.MAX_VALUE);
