@@ -6,6 +6,10 @@ class Minimum_Cost_To_Reach_Destination_In_Time_LC_1928 {
         int V = passingFees.length;
 
         // dp[node][time] : minimum cost to reach node using exactly time
+        // we use this as there are 2 constraints:
+            // 1: Cost (what we want to minimize)
+            // 2: Time 
+        // Thus, we can not use normal Dijkstra's algorithm
         int[][] dp = new int[V][maxTime + 1];
 
         for (int[] arr : dp) {
