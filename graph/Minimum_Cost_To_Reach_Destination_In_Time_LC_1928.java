@@ -5,7 +5,7 @@ class Minimum_Cost_To_Reach_Destination_In_Time_LC_1928 {
       public int minCost(int maxTime, int[][] edges, int[] passingFees) {
         int V = passingFees.length;
 
-        // dp[node][time] : minimum cost to reach "node" from 0 using exactly "time"
+        // dp[node][time] : minimum cost to reach "node" from 0 using exactly time = "time"
         // we use this as there are 2 constraints:
             // 1: Cost (what we want to minimize)
             // 2: Time 
