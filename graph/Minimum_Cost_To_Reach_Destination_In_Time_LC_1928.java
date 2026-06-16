@@ -34,9 +34,6 @@ class Minimum_Cost_To_Reach_Destination_In_Time_LC_1928 {
                 return curCost;
             }
 
-            // stale state
-            if (curCost > dp[curNode][curTime]) continue;
-
             for (Triplet neighbour : adjList.get(curNode)) {
                 int neighbourNode = neighbour.node;
                 int neighbourTime = neighbour.time;
