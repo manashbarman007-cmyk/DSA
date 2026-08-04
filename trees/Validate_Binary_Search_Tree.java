@@ -37,10 +37,13 @@ public class Validate_Binary_Search_Tree {
 
 // public boolean isValidBST(TreeNode root) {
 //         if (root == null) return true;
+
+           // if anytime we get a false, we bubble the false up the tree
 //         if (!isValidBST(root.left)) return false;
         
 //         if (prev != null && root.val <= prev.val) return false;
-        
+
+           // root becomes prev for the next call
 //         prev = root;
         
 //         return isValidBST(root.right);
